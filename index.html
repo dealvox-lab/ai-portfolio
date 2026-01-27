@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Projects Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <header class="hero">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="AI PORTFOLIO">AI PORTFOLIO</h1>
+            </div>
+            <p class="subtitle">MACHINE LEARNING × INNOVATION × FUTURE</p>
+            <div class="status-bar">
+                <span class="status-item">SYSTEM_ONLINE</span>
+                <span class="status-divider">//</span>
+                <span class="status-item">5_PROJECTS_LOADED</span>
+                <span class="status-divider">//</span>
+                <span class="status-item">STATUS_<span class="blink">ACTIVE</span></span>
+            </div>
+        </header>
+
+        <main class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card" style="animation-delay: 0.1s;">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="project-number">01</div>
+                    <h2 class="project-title">Neural Style Transfer Engine</h2>
+                    <div class="tech-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">CNN</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                    <p class="project-description">
+                        Deep learning model that applies artistic styles to photographs using convolutional neural networks. 
+                        Implements VGG19 architecture for feature extraction and style representation.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">ACCURACY</span>
+                            <span class="meta-value">94.7%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">TRAINING_TIME</span>
+                            <span class="meta-value">48h</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">STATUS</span>
+                            <span class="meta-value status-live">LIVE</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">
+                        <span>VIEW_PROJECT</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card" style="animation-delay: 0.2s;">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="project-number">02</div>
+                    <h2 class="project-title">Sentiment Analysis Framework</h2>
+                    <div class="tech-tags">
+                        <span class="tag">BERT</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">Transformers</span>
+                    </div>
+                    <p class="project-description">
+                        Advanced natural language processing system for multi-lingual sentiment classification. 
+                        Leverages transformer architecture with attention mechanisms for context understanding.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">F1_SCORE</span>
+                            <span class="meta-value">0.912</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">LANGUAGES</span>
+                            <span class="meta-value">12</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">STATUS</span>
+                            <span class="meta-value status-live">LIVE</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">
+                        <span>VIEW_PROJECT</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card" style="animation-delay: 0.3s;">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="project-number">03</div>
+                    <h2 class="project-title">Autonomous Navigation System</h2>
+                    <div class="tech-tags">
+                        <span class="tag">Reinforcement Learning</span>
+                        <span class="tag">ROS</span>
+                        <span class="tag">SLAM</span>
+                    </div>
+                    <p class="project-description">
+                        Real-time path planning and obstacle avoidance using deep Q-networks and simultaneous 
+                        localization and mapping. Deployed on embedded robotics platform.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">SUCCESS_RATE</span>
+                            <span class="meta-value">89.3%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">AVG_LATENCY</span>
+                            <span class="meta-value">23ms</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">STATUS</span>
+                            <span class="meta-value status-dev">DEV</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">
+                        <span>VIEW_PROJECT</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card" style="animation-delay: 0.4s;">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="project-number">04</div>
+                    <h2 class="project-title">Generative Audio Synthesis</h2>
+                    <div class="tech-tags">
+                        <span class="tag">GANs</span>
+                        <span class="tag">WaveNet</span>
+                        <span class="tag">Audio ML</span>
+                    </div>
+                    <p class="project-description">
+                        Neural network architecture for generating realistic audio samples and music composition. 
+                        Implements conditional generation with style transfer capabilities.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">SAMPLE_RATE</span>
+                            <span class="meta-value">48kHz</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">EPOCHS</span>
+                            <span class="meta-value">1000</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">STATUS</span>
+                            <span class="meta-value status-live">LIVE</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">
+                        <span>VIEW_PROJECT</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="project-card" style="animation-delay: 0.5s;">
+                <div class="card-border"></div>
+                <div class="card-content">
+                    <div class="project-number">05</div>
+                    <h2 class="project-title">Predictive Maintenance AI</h2>
+                    <div class="tech-tags">
+                        <span class="tag">Time Series</span>
+                        <span class="tag">LSTM</span>
+                        <span class="tag">IoT</span>
+                    </div>
+                    <p class="project-description">
+                        Industrial IoT solution for predicting equipment failures using recurrent neural networks. 
+                        Processes sensor data streams for anomaly detection and failure forecasting.
+                    </p>
+                    <div class="project-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">PRECISION</span>
+                            <span class="meta-value">91.2%</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">DATA_POINTS</span>
+                            <span class="meta-value">2.4M</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">STATUS</span>
+                            <span class="meta-value status-live">LIVE</span>
+                        </div>
+                    </div>
+                    <a href="#" class="project-link">
+                        <span>VIEW_PROJECT</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourusername" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="mailto:your.email@example.com" class="footer-link">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="footer-link">LINKEDIN</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 AI PORTFOLIO • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
