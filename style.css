@@ -198,6 +198,71 @@ body {
     animation: fadeInUp 1s ease 0.3s backwards;
 }
 
+.bio-section {
+    max-width: 800px;
+    margin: 2.5rem auto 2rem;
+    padding: 1.5rem 2rem;
+    background: rgba(0, 255, 159, 0.05);
+    border-left: 3px solid var(--primary);
+    border-radius: 4px;
+    animation: fadeInUp 1s ease 0.5s backwards;
+}
+
+.bio-text {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0 1.5rem;
+    animation: fadeInUp 1s ease 0.7s backwards;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: var(--primary);
+    background: rgba(0, 255, 159, 0.1);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: var(--primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.social-link:hover {
+    color: var(--darker);
+    transform: translateY(-3px);
+}
+
+.social-link:hover::before {
+    opacity: 1;
+}
+
+.social-link svg {
+    width: 22px;
+    height: 22px;
+}
+
 .status-bar {
     display: flex;
     justify-content: center;
@@ -550,6 +615,24 @@ body {
         padding: 5rem 0 3rem;
     }
     
+    .bio-section {
+        padding: 1.2rem 1.5rem;
+        margin: 2rem auto 1.5rem;
+    }
+    
+    .bio-text {
+        font-size: 0.95rem;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+    }
+    
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+    
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -578,6 +661,30 @@ body {
     .subtitle {
         font-size: 0.8rem;
         letter-spacing: 0.2em;
+    }
+    
+    .bio-section {
+        padding: 1rem;
+        margin: 1.5rem auto 1rem;
+    }
+    
+    .bio-text {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    .social-links {
+        gap: 1rem;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-link svg {
+        width: 20px;
+        height: 20px;
     }
     
     .card-content {
