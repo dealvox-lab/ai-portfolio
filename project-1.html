@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI HR Vetting & Candidate Sourcing Suite - Roman Pikliaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="project-nav">
+            <a href="index.html" class="back-link">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <div class="project-number-badge">PROJECT_01</div>
+        </nav>
+
+        <!-- Project Header -->
+        <header class="project-header">
+            <div class="project-tag">US IT OUTSOURCING COMPANY</div>
+            <h1 class="project-title-main">AI HR Vetting & Candidate Sourcing Automation Suite</h1>
+            <p class="project-tagline">
+                End-to-end intelligent recruitment pipeline with adaptive skill assessment and automated candidate discovery
+            </p>
+            
+            <div class="project-stats">
+                <div class="stat-item">
+                    <span class="stat-value">+21%</span>
+                    <span class="stat-label">Candidate Flow Increase</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">12-15h</span>
+                    <span class="stat-label">HR Time Saved/Week</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">6-Fig</span>
+                    <span class="stat-label">Annual Savings</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value status-live">LIVE</span>
+                    <span class="stat-label">Production Status</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Challenge Section -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">01</span>
+                THE CHALLENGE
+            </h2>
+            <div class="section-content">
+                <p>
+                    A US-based IT outsourcing company struggled with high-volume candidate screening across multiple hiring 
+                    pipelines. HR teams spent 15-20 hours per week manually reviewing applications, conducting initial skill 
+                    assessments, and sourcing candidates from professional networks. The process was:
+                </p>
+                <ul class="challenge-list">
+                    <li><strong>Time-Intensive:</strong> Manual screening of hundreds of applications per week</li>
+                    <li><strong>Inconsistent:</strong> Variable evaluation criteria across different recruiters</li>
+                    <li><strong>Reactive:</strong> Relied on inbound applications rather than proactive sourcing</li>
+                    <li><strong>Generic:</strong> Standard outreach messages yielded low response rates</li>
+                    <li><strong>Delayed:</strong> Qualified candidates often moved to competitors during slow screening cycles</li>
+                </ul>
+                <p>
+                    The company needed an intelligent system that could maintain hiring quality while dramatically 
+                    accelerating the recruitment pipeline and expanding candidate reach.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Overview with Image -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">02</span>
+                SOLUTION ARCHITECTURE
+            </h2>
+            <div class="section-content">
+                <div class="image-showcase">
+                    <img src="images/project_image_1.2.jpeg" alt="System Architecture Diagram">
+                    <p class="image-caption">End-to-end automation pipeline: intake → enrichment → adaptive quiz → scoring → recommendations</p>
+                </div>
+                
+                <p>
+                    Built a comprehensive AI-driven recruitment automation system with two core workflows:
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Intelligent Vetting Pipeline</h3>
+                        <p>
+                            Automated candidate evaluation through adaptive skill-check interviews, LLM-powered scoring, 
+                            and data enrichment to surface the best matches quickly and consistently.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Proactive Sourcing Engine</h3>
+                        <p>
+                            RPA-driven candidate discovery across professional networks with personalized outreach 
+                            automation that dramatically improved response and conversion rates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">03</span>
+                TECHNICAL IMPLEMENTATION
+            </h2>
+            <div class="section-content">
+                
+                <!-- Candidate Intake System -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Candidate Intake & Parsing Layer</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_1.3.jpeg" alt="Candidate Profile Processing">
+                        <p class="image-caption">Normalization pipeline converting unstructured applications into structured candidate profiles</p>
+                    </div>
+                    <p>
+                        Implemented an intelligent ingestion system that processes application forms with inconsistent 
+                        data quality and formats them into structured, analysis-ready profiles.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Input Sources:</span>
+                            <span class="tech-value">Application forms, role preferences, tech stack, experience level, domain expertise</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Normalization:</span>
+                            <span class="tech-value">Field cleaning, consistent naming, role mapping, scoring-ready attributes</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output:</span>
+                            <span class="tech-value">Structured candidate profile JSON with validation and completeness scoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adaptive Quiz System -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Adaptive Skill-Check Bot</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_1.4.jpeg" alt="Quiz Generation Interface">
+                        <p class="image-caption">Role-specific quiz generation with adaptive questioning based on candidate background</p>
+                    </div>
+                    <p>
+                        Developed a custom quiz assistant that generates role-specific technical assessments using 
+                        a structured evaluation rubric tailored to each position's requirements.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Question Generation:</span>
+                            <span class="tech-value">LLM-powered, role-based sections (support, networking, automation, scripting, infrastructure)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Quiz Format:</span>
+                            <span class="tech-value">Multiple-choice for consistent scoring, sequential flow with progress tracking</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Adaptability:</span>
+                            <span class="tech-value">Difficulty adjusts based on candidate's experience level and previous answers</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Delivery:</span>
+                            <span class="tech-value">API-driven workflow triggerable per-candidate with automatic result collection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Evaluation Engine -->
+                <div class="tech-block">
+                    <h3 class="tech-title">LLM Evaluation & Matching Engine</h3>
+                    <p>
+                        Built a sophisticated scoring layer that analyzes candidate applications, enriches profiles with 
+                        extracted signals, and produces actionable match scores against vacancy requirements.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Analysis Signals:</span>
+                            <span class="tech-value">Seniority indicators, tool familiarity, skill gaps, domain experience</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Structured Outputs:</span>
+                            <span class="tech-value">Strengths, risks, missing skills, suggested interview track</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Recommendations:</span>
+                            <span class="tech-value">Reject / short interview / technical interview / direct hire recommendation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Track Routing:</span>
+                            <span class="tech-value">Support, automation, infrastructure, field ops, etc.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Enrichment -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Open-Source Data Enrichment</h3>
+                    <p>
+                        Automated enrichment pipeline that validates and enhances candidate profiles using publicly 
+                        available professional data sources.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Enrichment Sources:</span>
+                            <span class="tech-value">Professional profiles, technology history, consistency validation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Validation:</span>
+                            <span class="tech-value">Cross-reference application claims with public professional history</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Integration:</span>
+                            <span class="tech-value">Merged back into candidate profile to improve matching accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orchestration Layer -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Automation & Orchestration</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_1.5.jpeg" alt="Workflow Orchestration Dashboard">
+                        <p class="image-caption">Modular workflow system with end-to-end pipeline monitoring and HR-friendly outputs</p>
+                    </div>
+                    <p>
+                        Designed the entire system as a modular, repeatable workflow with comprehensive error handling 
+                        and HR-optimized outputs.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Workflow Steps:</span>
+                            <span class="tech-value">Parse form → enrich → quiz generation → quiz run → scoring → HR recommendations</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Reliability:</span>
+                            <span class="tech-value">Retry logic, failure handling, graceful degradation for incomplete data</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Outputs:</span>
+                            <span class="tech-value">HR-friendly reports, scorecards, interview recommendations, candidate summaries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RPA Sourcing -->
+                <div class="tech-block">
+                    <h3 class="tech-title">RPA-Based Candidate Sourcing & Outreach</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_1.6.jpeg" alt="Automated Sourcing Pipeline">
+                        <p class="image-caption">RPA-driven candidate discovery with personalized outreach automation and conversion tracking</p>
+                    </div>
+                    <p>
+                        Implemented automated candidate search and personalized outreach that significantly expanded 
+                        the talent pipeline beyond passive applications.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Search Automation:</span>
+                            <span class="tech-value">RPA workflows across professional networks with smart filtering</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Personalization:</span>
+                            <span class="tech-value">Tailored outreach based on role requirements + candidate background</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Performance Tracking:</span>
+                            <span class="tech-value">Logging, conversion metrics, response rate monitoring</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Impact:</span>
+                            <span class="tech-value">Generic messaging eliminated, response rates significantly improved</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">04</span>
+                TECHNOLOGY STACK
+            </h2>
+            <div class="section-content">
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>AI & LLM</h3>
+                        <ul>
+                            <li>Large Language Models for quiz generation & evaluation</li>
+                            <li>Custom prompt engineering for structured outputs</li>
+                            <li>Adaptive questioning algorithms</li>
+                            <li>Semantic matching & scoring</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Automation & RPA</h3>
+                        <ul>
+                            <li>RPA frameworks for candidate sourcing</li>
+                            <li>Workflow orchestration engines</li>
+                            <li>API integration layer</li>
+                            <li>Event-driven processing</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Data Processing</h3>
+                        <ul>
+                            <li>JSON normalization pipelines</li>
+                            <li>Data enrichment services</li>
+                            <li>Profile validation & consistency checks</li>
+                            <li>Structured output generation</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Infrastructure</h3>
+                        <ul>
+                            <li>Cloud-based deployment</li>
+                            <li>API-first architecture</li>
+                            <li>Retry & failure handling</li>
+                            <li>Performance monitoring & logging</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">05</span>
+                RESULTS & BUSINESS IMPACT
+            </h2>
+            <div class="section-content">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">📈</div>
+                        <h3>+21% Candidate Flow</h3>
+                        <p>Increased inbound candidate volume through scalable sourcing and personalized outreach automation</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⏱️</div>
+                        <h3>12-15 Hours Saved Weekly</h3>
+                        <p>Per HR staff member through automated screening, quiz vetting, scoring, enrichment, and recommendations</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">💰</div>
+                        <h3>Six-Figure Annual Savings</h3>
+                        <p>Reduced recruiter overhead and accelerated time-to-screen for high-volume hiring</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🎯</div>
+                        <h3>Improved Shortlist Quality</h3>
+                        <p>Standardized evaluation criteria produced more consistent, higher-quality candidate recommendations</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⚡</div>
+                        <h3>Faster Screening Cycles</h3>
+                        <p>Reduced time-to-first-interview, preventing candidate loss to competitors</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🤖</div>
+                        <h3>Production-Ready System</h3>
+                        <p>Deployed and operational across multiple hiring pipelines with continuous optimization</p>
+                    </div>
+                </div>
+
+                <div class="outcome-summary">
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The AI HR Vetting & Candidate Sourcing Suite transformed the company's recruitment operations 
+                        from a reactive, manual process into a proactive, intelligent system. By automating repetitive 
+                        evaluation tasks and expanding candidate reach through smart sourcing, the solution delivered 
+                        measurable improvements in hiring speed, quality, and cost-efficiency.
+                    </p>
+                    <p>
+                        The system maintains production stability through robust error handling and continues to improve 
+                        through iterative refinement based on real-world hiring outcomes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <nav class="project-footer-nav">
+            <a href="index.html" class="nav-button">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <a href="project-2.html" class="nav-button">
+                <span>NEXT PROJECT</span>
+                <span class="arrow-right">→</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourprofile" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="mailto:your.email@example.com" class="footer-link">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="footer-link">LINKEDIN</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://t.me/yourusername" class="footer-link">TELEGRAM</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 ROMAN PIKLIAEV • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
