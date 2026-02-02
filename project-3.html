@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Field Image Capture + Computer Vision QA - Roman Pikliaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="project-nav">
+            <a href="index.html" class="back-link">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <div class="project-number-badge">PROJECT_03</div>
+        </nav>
+
+        <!-- Project Header -->
+        <header class="project-header">
+            <div class="project-tag">BIG US SOLAR EQUIPMENT INSTALLATION COMPANY</div>
+            <h1 class="project-title-main">Field Image Capture + Computer Vision QA Pipeline</h1>
+            <p class="project-tagline">
+                Production-grade mobile app and AI vision system automating solar installation quality control through intelligent image analysis
+            </p>
+            
+            <div class="project-stats">
+                <div class="stat-item">
+                    <span class="stat-value">Field Ops</span>
+                    <span class="stat-label">Deployment Target</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Mid-5 Fig</span>
+                    <span class="stat-label">Annual Savings</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">CV+LLM</span>
+                    <span class="stat-label">AI Architecture</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value status-live">LIVE</span>
+                    <span class="stat-label">Production Status</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Challenge Section -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">01</span>
+                THE CHALLENGE
+            </h2>
+            <div class="section-content">
+                <p>
+                    A major US solar equipment installation company struggled with post-installation quality assurance. 
+                    Field technicians captured hundreds of installation photos weekly, but manual review created significant 
+                    operational bottlenecks:
+                </p>
+                <ul class="challenge-list">
+                    <li><strong>Manual Photo Review:</strong> QA teams spent hours reviewing installation photos to verify equipment placement and installation quality</li>
+                    <li><strong>Inconsistent Standards:</strong> Human reviewers applied subjective criteria, leading to variable quality assessments</li>
+                    <li><strong>Delayed Feedback:</strong> Issues discovered days after installation required costly return visits and rework</li>
+                    <li><strong>Documentation Gaps:</strong> Photos often lacked proper context, metadata, or project association</li>
+                    <li><strong>Scalability Limits:</strong> Growing business volume made manual inspection unsustainable</li>
+                    <li><strong>Field Friction:</strong> Complex photo submission workflows reduced technician compliance</li>
+                </ul>
+                <p>
+                    The company needed an automated Computer Vision system that field teams could use easily while 
+                    capturing installation photos, with AI automatically detecting equipment types, identifying installation 
+                    issues, and flagging quality risks—all in real-time during field visits.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">02</span>
+                SOLUTION ARCHITECTURE
+            </h2>
+            <div class="section-content">
+                <div class="image-showcase">
+                    <img src="images/project_image_3_5.jpeg" alt="Power Apps Mobile Interface">
+                    <p class="image-caption">Field technician mobile app interface for project selection, visit date entry, and multi-image upload with simple, friction-free UX</p>
+                </div>
+                
+                <p>
+                    Built a production-grade end-to-end system combining mobile data capture, cloud automation, 
+                    and AI-powered visual inspection to replace manual photo review with intelligent, automated quality control.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Mobile Field Capture</h3>
+                        <p>
+                            Power Apps mobile interface designed for field technicians to quickly select projects, 
+                            set visit dates, and upload installation photos with minimal friction.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Automated Vision Pipeline</h3>
+                        <p>
+                            Computer Vision models detect equipment types, classify installation quality, and identify 
+                            potential issues with confidence scoring and structured metadata outputs.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Intelligent Orchestration</h3>
+                        <p>
+                            Power Automate + Make.com workflows handle attachment processing, batch operations, 
+                            retry logic, and fail-safe patterns for production reliability.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Structured Reporting</h3>
+                        <p>
+                            Processed images with AI-derived metadata stored in company cloud systems, creating 
+                            searchable, report-ready datasets for operations teams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">03</span>
+                TECHNICAL IMPLEMENTATION
+            </h2>
+            <div class="section-content">
+                
+                <!-- Mobile Capture Layer -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Mobile Capture & Data Input Layer</h3>
+                    <p>
+                        Implemented a Power Apps mobile interface optimized for field technicians working on-site 
+                        during solar equipment installations. The app prioritizes simplicity and speed to maximize 
+                        adoption and data quality.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Platform:</span>
+                            <span class="tech-value">Microsoft Power Apps mobile canvas app</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">User Workflow:</span>
+                            <span class="tech-value">Select project → Set visit date → Upload one or multiple photos per visit</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Design Philosophy:</span>
+                            <span class="tech-value">Simple, friction-free UX ensuring every image is tied to correct operational context</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Metadata Capture:</span>
+                            <span class="tech-value">Project ID, visit date, technician info, GPS coordinates (optional)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Automation Orchestration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Automation Layer - Workflow Orchestration</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_3_3.jpeg" alt="Power Automate Flow">
+                        <p class="image-caption">Microsoft Power Automate backend automation handling file attachment lifecycle with validation, batching, and error handling</p>
+                    </div>
+                    <p>
+                        Built Power Automate flows as the backbone of the ingestion pipeline, managing the complete 
+                        attachment lifecycle from upload through AI processing to final storage.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Flow Responsibilities:</span>
+                            <span class="tech-value">Receive uploads, validate payload structure, batch multiple attachments, route to processing</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Reliability Engineering:</span>
+                            <span class="tech-value">Retry logic, conditional routing, structured logging, graceful degradation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Fail-Safe Patterns:</span>
+                            <span class="tech-value">Workflow continues even when some files fail, preventing broken runs</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Integration Points:</span>
+                            <span class="tech-value">Power Apps trigger → Processing pipeline → Cloud storage → Reporting systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Make.com Integration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Make.com Supporting Flow</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_3_2.jpeg" alt="Make.com Workflow">
+                        <p class="image-caption">Make.com automation scenario providing additional orchestration, data transformation, and external API integration capabilities</p>
+                    </div>
+                    <p>
+                        Implemented Make.com (formerly Integromat) scenarios to handle advanced orchestration requirements, 
+                        complex data transformations, and integrations beyond Power Automate's native capabilities.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Use Cases:</span>
+                            <span class="tech-value">Complex conditional logic, parallel processing, external API calls, data enrichment</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Integration Pattern:</span>
+                            <span class="tech-value">Webhooks from Power Automate → Make.com processing → Results back to cloud storage</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Advantages:</span>
+                            <span class="tech-value">Visual workflow builder, advanced error handling, extensive API connector library</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flow Execution Monitoring -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Flow Execution & Monitoring</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_3_4.jpeg" alt="Successful Flow Runs">
+                        <p class="image-caption">Production flow execution history showing successful runs with timestamps, ensuring reliable real-world operation</p>
+                    </div>
+                    <p>
+                        Implemented comprehensive monitoring and logging infrastructure to track pipeline health, 
+                        execution success rates, and performance metrics across production operations.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Execution Tracking:</span>
+                            <span class="tech-value">Run history, timestamps, success/failure indicators, execution duration</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Reliability Metrics:</span>
+                            <span class="tech-value">Success rate monitoring, failure pattern analysis, bottleneck identification</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Real-World Performance:</span>
+                            <span class="tech-value">Consistent execution under field conditions (multiple images per job, variable connectivity)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Debugging Support:</span>
+                            <span class="tech-value">Detailed logs capturing context for troubleshooting without slowing field operations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Computer Vision Pipeline -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Computer Vision Processing Pipeline</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_3.jpeg" alt="Visual Recognition Training">
+                        <p class="image-caption">Custom computer vision model training interface for equipment detection and quality classification with confidence thresholds</p>
+                    </div>
+                    <p>
+                        Each uploaded image is routed through a trained CV model pipeline that performs detection, 
+                        classification, and quality assessment, producing normalized, machine-readable outputs.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Model Training:</span>
+                            <span class="tech-value">Custom vision models trained on solar equipment installation images</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Detection Tasks:</span>
+                            <span class="tech-value">Equipment type identification, installation quality flags, positioning verification</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output Structure:</span>
+                            <span class="tech-value">Equipment labels, quality flags, confidence scores, extracted metadata</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Quality Controls:</span>
+                            <span class="tech-value">Confidence thresholds prevent uncertain detections from being treated as final results</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Post-Processing:</span>
+                            <span class="tech-value">Normalization logic ensures outputs are reporting-ready without manual cleanup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Enhancement Layer -->
+                <div class="tech-block">
+                    <h3 class="tech-title">LLM Enhancement & Contextual Analysis</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_3_1.jpeg" alt="LLM Performance Metrics">
+                        <p class="image-caption">LLM performance monitoring dashboard showing processing efficiency, response quality, and contextual understanding metrics</p>
+                    </div>
+                    <p>
+                        Integrated Large Language Models to provide additional context, generate human-readable summaries, 
+                        and enhance Computer Vision outputs with natural language descriptions and recommendations.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">LLM Use Cases:</span>
+                            <span class="tech-value">Convert CV outputs to natural language, generate issue summaries, recommend next actions</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Performance Tracking:</span>
+                            <span class="tech-value">Response time monitoring, output quality scoring, token usage optimization</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Integration Pattern:</span>
+                            <span class="tech-value">CV detections → LLM contextual enhancement → Structured report generation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output Enhancement:</span>
+                            <span class="tech-value">Technical findings translated to actionable insights for field operations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Storage & Reporting -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Cloud Storage & Structured Reporting</h3>
+                    <p>
+                        Processed images and AI-derived metadata are stored in the company's cloud infrastructure 
+                        with structured outputs enabling immediate operational use.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Storage Architecture:</span>
+                            <span class="tech-value">Cloud-based file storage with metadata indexing and tagging</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output Format:</span>
+                            <span class="tech-value">File links, equipment tags, QC results, confidence scores, issue flags</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Searchability:</span>
+                            <span class="tech-value">Structured metadata enables filtering by project, date, equipment type, quality status</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Reporting Integration:</span>
+                            <span class="tech-value">Data feeds directly into operations dashboards and quality reports</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">04</span>
+                TECHNOLOGY STACK
+            </h2>
+            <div class="section-content">
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>Computer Vision & AI</h3>
+                        <ul>
+                            <li>Custom-trained vision models</li>
+                            <li>Equipment detection & classification</li>
+                            <li>Quality assessment algorithms</li>
+                            <li>LLM integration for context enhancement</li>
+                            <li>Confidence scoring & thresholding</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Microsoft Power Platform</h3>
+                        <ul>
+                            <li>Power Apps (mobile canvas app)</li>
+                            <li>Power Automate (workflow automation)</li>
+                            <li>Dataverse for metadata storage</li>
+                            <li>SharePoint/OneDrive integration</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Automation & Orchestration</h3>
+                        <ul>
+                            <li>Make.com (advanced workflows)</li>
+                            <li>Webhook-based event handling</li>
+                            <li>Batch processing logic</li>
+                            <li>Retry & error handling patterns</li>
+                            <li>Conditional routing & branching</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Infrastructure & Monitoring</h3>
+                        <ul>
+                            <li>Cloud storage services</li>
+                            <li>Execution monitoring & logging</li>
+                            <li>Performance metrics tracking</li>
+                            <li>Structured metadata outputs</li>
+                            <li>Fail-safe & reliability engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">05</span>
+                RESULTS & BUSINESS IMPACT
+            </h2>
+            <div class="section-content">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">🤖</div>
+                        <h3>Automated Photo Inspection</h3>
+                        <p>Replaced manual photo review with AI-powered Computer Vision workflow that consistently classifies and validates installation images</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⚡</div>
+                        <h3>Accelerated Reporting</h3>
+                        <p>Real-time processing enables immediate QA feedback to field teams instead of delayed manual review cycles</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">💰</div>
+                        <h3>Mid-Five-Figure Annual Savings</h3>
+                        <p>Eliminated repetitive manual inspection work while improving installation quality control</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📊</div>
+                        <h3>Improved Quality Standards</h3>
+                        <p>Consistent AI-driven quality assessment eliminates subjective human variability in inspection criteria</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📱</div>
+                        <h3>Field Team Adoption</h3>
+                        <p>Simple mobile interface designed for technicians maximizes compliance and data quality</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🔍</div>
+                        <h3>Searchable Documentation</h3>
+                        <p>Structured AI-derived metadata transforms raw photos into queryable, report-ready datasets</p>
+                    </div>
+                </div>
+
+                <div class="outcome-summary">
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The Field Image Capture + Computer Vision QA Pipeline transformed solar installation quality control 
+                        from a manual, time-consuming process into an automated, intelligent system. By combining mobile data 
+                        capture with AI-powered visual inspection, the solution accelerated reporting cycles, eliminated 
+                        repetitive manual work, and delivered consistent quality standards across all field operations.
+                    </p>
+                    <p>
+                        The production system runs reliably under real-world field conditions, handling variable image quality, 
+                        inconsistent connectivity, and high-volume processing demands. Comprehensive monitoring, fail-safe 
+                        patterns, and structured outputs ensure operational stability while delivering mid-five-figure annual 
+                        cost savings through improved efficiency and reduced QA overhead.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <nav class="project-footer-nav">
+            <a href="project-2.html" class="nav-button">
+                <span class="arrow-left">←</span>
+                <span>PREVIOUS PROJECT</span>
+            </a>
+            <a href="index.html" class="nav-button">
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourprofile" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="#" class="footer-link" onclick="window.location.href='mailto:' + ['roman.rushey','gmail.com'].join('@'); return false;">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="footer-link">LINKEDIN</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://t.me/yourusername" class="footer-link">TELEGRAM</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 ROMAN PIKLIAEV • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
