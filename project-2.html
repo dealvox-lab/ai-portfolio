@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outlook AI Executive Assistant - Roman Pikliaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="project-nav">
+            <a href="index.html" class="back-link">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <div class="project-number-badge">PROJECT_02</div>
+        </nav>
+
+        <!-- Project Header -->
+        <header class="project-header">
+            <div class="project-tag">PHARMACEUTICAL C-LEVEL</div>
+            <h1 class="project-title-main">Outlook AI Executive Assistant</h1>
+            <p class="project-tagline">
+                Intelligent inbox automation with AI-powered reply drafting, semantic search, and continuous learning for pharmaceutical executives
+            </p>
+            
+            <div class="project-stats">
+                <div class="stat-item">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Executive Inboxes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">2-3h</span>
+                    <span class="stat-label">Time Saved/Week/User</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Azure</span>
+                    <span class="stat-label">Cloud Platform</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value status-live">LIVE</span>
+                    <span class="stat-label">Production Status</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Challenge Section -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">01</span>
+                THE CHALLENGE
+            </h2>
+            <div class="section-content">
+                <p>
+                    Pharmaceutical C-level executives faced overwhelming inbox traffic with hundreds of messages daily requiring 
+                    immediate attention, thoughtful responses, and proper routing. The manual email management process was:
+                </p>
+                <ul class="challenge-list">
+                    <li><strong>Time-Consuming:</strong> 3-5 hours daily spent reading, categorizing, and responding to emails</li>
+                    <li><strong>Inconsistent:</strong> Reply quality and tone varied depending on workload and fatigue</li>
+                    <li><strong>Context-Heavy:</strong> Required deep knowledge of past conversations, company policies, and ongoing initiatives</li>
+                    <li><strong>High-Stakes:</strong> Pharmaceutical industry communications require precision, compliance, and appropriate escalation</li>
+                    <li><strong>Noise-Laden:</strong> Critical business communications buried among spam, newsletters, and low-priority messages</li>
+                </ul>
+                <p>
+                    The company needed an AI system that could understand executive writing style, generate contextually appropriate 
+                    draft responses, filter noise, and continuously improve through feedback—all while maintaining the high standards 
+                    required in pharmaceutical communications.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Overview with Image -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">02</span>
+                SOLUTION ARCHITECTURE
+            </h2>
+            <div class="section-content">
+                <div class="image-showcase">
+                    <img src="images/project_image_2_1.jpeg" alt="AI Learning and Email Flow Architecture">
+                    <p class="image-caption">Two-phase workflow: Phase 1 - AI learning from historical emails; Phase 2 - Real-time email management with intelligent routing and draft generation</p>
+                </div>
+                
+                <p>
+                    Built a production-grade AI assistant integrated directly with Microsoft Outlook, leveraging Azure OpenAI 
+                    and custom RAG (Retrieval-Augmented Generation) architecture to deliver executive-quality email assistance.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Intelligent Reply Drafting</h3>
+                        <p>
+                            LLM-powered draft generation trained on historical email archives to match executive tone, 
+                            decision-making patterns, and communication style with business-critical accuracy.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Semantic Search & Context Retrieval</h3>
+                        <p>
+                            Vector-based search across email history to surface relevant past conversations, routing patterns, 
+                            and company-specific terminology for contextually grounded responses.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Continuous Learning Loop</h3>
+                        <p>
+                            Human-in-the-loop feedback mechanism that captures executive edits and routing decisions to 
+                            iteratively improve draft quality and recommendation accuracy.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Intelligent Filtering</h3>
+                        <p>
+                            Multi-layer spam and priority classification to surface actionable messages while filtering noise 
+                            without disrupting business-critical communications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">03</span>
+                TECHNICAL IMPLEMENTATION
+            </h2>
+            <div class="section-content">
+                
+                <!-- Email Integration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Email Ingestion & Normalization</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_2_4.jpeg" alt="Outlook Inbox Interface">
+                        <p class="image-caption">Live Outlook integration showing high-volume executive inbox with 69+ messages requiring intelligent processing and prioritization</p>
+                    </div>
+                    <p>
+                        Integrated deeply with Microsoft Outlook to pull messages with full thread context, metadata, and 
+                        attachment handling for comprehensive email understanding.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Data Sources:</span>
+                            <span class="tech-value">Sender, subject, body, attachments, thread context, timestamps, folder metadata</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Normalization:</span>
+                            <span class="tech-value">Parsing layer converts emails to clean JSON objects (signature stripping, thread-safe formatting)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Volume Handling:</span>
+                            <span class="tech-value">Deployed across 12 executive inboxes processing thousands of messages daily</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Azure Microservices -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Azure Microservices Architecture</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_2_2.jpeg" alt="Azure Resources Dashboard">
+                        <p class="image-caption">Azure cloud infrastructure showing deployed resources: AI Foundry, Function Apps, Search services, and Storage accounts</p>
+                    </div>
+                    <p>
+                        Implemented multiple Azure Function Apps as modular microservices to separate responsibilities and 
+                        maintain a clean, scalable pipeline architecture.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">email-conversion:</span>
+                            <span class="tech-value">Message → structured JSON transformation service</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">spam-email-to-json-func:</span>
+                            <span class="tech-value">Spam detection and filtering preprocessing pipeline</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">json-to-vector:</span>
+                            <span class="tech-value">Embedding generation and vector indexing for semantic search</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">query-document:</span>
+                            <span class="tech-value">Retrieval + response assembly orchestration endpoint</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Deployment Pattern:</span>
+                            <span class="tech-value">Lightweight HTTP endpoints callable by automation tools, Outlook actions, internal dashboards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Processing -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Backend Processing & Query Function</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_2.jpeg" alt="Python Function Code">
+                        <p class="image-caption">Azure Function App Python code showing query processing logic with user input parsing and LLM result formatting</p>
+                    </div>
+                    <p>
+                        Built Python-based Azure Functions to handle email parsing, user query extraction, and result 
+                        formatting with robust error handling and logging.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Framework:</span>
+                            <span class="tech-value">Azure Functions with Python runtime for serverless execution</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Request Handling:</span>
+                            <span class="tech-value">HTTP-triggered functions parsing JSON requests with subject, from, body fields</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Processing Logic:</span>
+                            <span class="tech-value">Query extraction, context assembly, LLM invocation, structured response formatting</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Error Management:</span>
+                            <span class="tech-value">Exception handling with graceful degradation and detailed logging for debugging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LLM Layer -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Custom Model & Executive Drafting Engine</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_2_3.jpeg" alt="Azure Model Deployments">
+                        <p class="image-caption">Azure AI Foundry model deployments: GPT-4.1-mini, GPT-4o, and text-embedding-ada-002 for chat and semantic search</p>
+                    </div>
+                    <p>
+                        Deployed multiple Azure OpenAI models optimized for different tasks: lightweight chat for drafting, 
+                        embeddings for semantic retrieval, with custom prompt engineering for executive tone and compliance.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Chat Models:</span>
+                            <span class="tech-value">GPT-4.1-mini (cast_json), GPT-4o (cast_json_4omni) for response generation and reasoning</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Embedding Model:</span>
+                            <span class="tech-value">text-embedding-ada-002 for semantic search over email archives</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">RAG Workflow:</span>
+                            <span class="tech-value">Build embeddings from historical messages → Query relevant context → Generate draft with executive tone</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output Structure:</span>
+                            <span class="tech-value">Draft reply, decision clarity, compliant structure, routing recommendations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Semantic Search -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Semantic Search & Knowledge Retrieval</h3>
+                    <p>
+                        Implemented vector-enabled search infrastructure to retrieve relevant context from historical 
+                        email archives using semantic similarity rather than keyword matching.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Vector Storage:</span>
+                            <span class="tech-value">Azure AI Search (castsearch2) with vector search capabilities</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Indexed Content:</span>
+                            <span class="tech-value">Email threads, reply patterns, internal terminology, routing history</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Query Endpoints:</span>
+                            <span class="tech-value">Similar thread context, matching prior replies, routing action patterns</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Context Assembly:</span>
+                            <span class="tech-value">Strict token budgeting with relevancy scoring for optimal LLM input</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spam Filtering -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Spam Filtering & Prioritization Logic</h3>
+                    <p>
+                        Built a multi-layer classification system to categorize emails by urgency and business value while 
+                        avoiding false positives on critical communications.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Classification:</span>
+                            <span class="tech-value">Spam / low priority / actionable / urgent categories</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Safety Controls:</span>
+                            <span class="tech-value">Confidence thresholds and rules to prevent filtering business-critical messages</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Priority Signals:</span>
+                            <span class="tech-value">Sender reputation, subject keywords, thread importance, attachment types</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Learning Loop -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Human-in-the-Loop Learning System</h3>
+                    <p>
+                        Implemented a feedback mechanism that captures executive edits and decisions to continuously 
+                        improve the quality of draft responses and routing recommendations.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Captured Signals:</span>
+                            <span class="tech-value">Draft edits (diff-based learning), send vs. discard decisions, routing overrides</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Feedback Loop:</span>
+                            <span class="tech-value">Signals fed back into prompt/model tuning workflow for iterative improvement</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Adaptation:</span>
+                            <span class="tech-value">System learns executive preferences, routing patterns, tone adjustments over time</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">04</span>
+                TECHNOLOGY STACK
+            </h2>
+            <div class="section-content">
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>Azure AI Services</h3>
+                        <ul>
+                            <li>Azure OpenAI (GPT-4o, GPT-4.1-mini)</li>
+                            <li>Azure AI Foundry for model deployment</li>
+                            <li>Text-embedding-ada-002 for vectors</li>
+                            <li>Azure AI Search for semantic retrieval</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Azure Compute & Functions</h3>
+                        <ul>
+                            <li>Azure Function Apps (Python runtime)</li>
+                            <li>Serverless HTTP-triggered endpoints</li>
+                            <li>Modular microservices architecture</li>
+                            <li>Auto-scaling for variable load</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Integration & Automation</h3>
+                        <ul>
+                            <li>Microsoft Outlook API integration</li>
+                            <li>Email parsing & normalization</li>
+                            <li>Webhook-based event handling</li>
+                            <li>Thread context preservation</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Data & Storage</h3>
+                        <ul>
+                            <li>Azure Storage accounts (datalake1)</li>
+                            <li>Vector database for embeddings</li>
+                            <li>Email archive storage</li>
+                            <li>Metadata indexing & retrieval</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">05</span>
+                RESULTS & BUSINESS IMPACT
+            </h2>
+            <div class="section-content">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">⏱️</div>
+                        <h3>2-3 Hours Saved Weekly</h3>
+                        <p>Per executive through automated draft generation, intelligent filtering, and quick decision-ready summaries</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📊</div>
+                        <h3>12 Executive Inboxes</h3>
+                        <p>Production deployment across pharmaceutical C-level team with consistent performance and reliability</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">✨</div>
+                        <h3>Improved Response Consistency</h3>
+                        <p>Standardized tone and decision quality across all executive communications regardless of workload</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🎯</div>
+                        <h3>Reduced Missed Messages</h3>
+                        <p>Intelligent prioritization ensured critical communications surfaced immediately without manual sorting</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🔄</div>
+                        <h3>Continuous Improvement</h3>
+                        <p>Feedback loop captures edits and decisions to iteratively enhance draft quality and routing accuracy</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🛡️</div>
+                        <h3>Noise Filtering</h3>
+                        <p>Multi-layer spam and priority detection eliminated distractions while preserving business-critical messages</p>
+                    </div>
+                </div>
+
+                <div class="outcome-summary">
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The Outlook AI Executive Assistant transformed email management for pharmaceutical C-level executives 
+                        from a time-consuming manual process into an intelligent, AI-assisted workflow. By generating 
+                        contextually appropriate draft responses, filtering noise, and learning from executive feedback, 
+                        the system delivered measurable productivity gains while maintaining the high communication standards 
+                        required in the pharmaceutical industry.
+                    </p>
+                    <p>
+                        The modular Azure-based architecture ensures scalability, reliability, and easy maintenance across 
+                        multiple executive inboxes. The human-in-the-loop learning mechanism creates a virtuous cycle where 
+                        the system becomes more valuable over time as it adapts to each executive's unique communication style 
+                        and decision-making patterns.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <nav class="project-footer-nav">
+            <a href="project-1.html" class="nav-button">
+                <span class="arrow-left">←</span>
+                <span>PREVIOUS PROJECT</span>
+            </a>
+            <a href="index.html" class="nav-button">
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourprofile" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="#" class="footer-link" onclick="window.location.href='mailto:' + ['roman.rushey','gmail.com'].join('@'); return false;">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="footer-link">LINKEDIN</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://t.me/yourusername" class="footer-link">TELEGRAM</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 ROMAN PIKLIAEV • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
