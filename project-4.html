@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dev Copilot - Roman Pikliaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="project-nav">
+            <a href="index.html" class="back-link">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <div class="project-number-badge">PROJECT_04</div>
+        </nav>
+
+        <!-- Project Header -->
+        <header class="project-header">
+            <div class="project-tag">LEARNING COMPANY</div>
+            <h1 class="project-title-main">Custom Dev Copilot (Code AI Assistant)</h1>
+            <p class="project-tagline">
+                Domain-specific coding assistant trained on company GitHub repositories, delivering project-aware code generation and refactoring inside developer workflows
+            </p>
+            
+            <div class="project-stats">
+                <div class="stat-item">
+                    <span class="stat-value">IDE+Web</span>
+                    <span class="stat-label">Integration Points</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">GitHub</span>
+                    <span class="stat-label">Training Source</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Early Mkt</span>
+                    <span class="stat-label">Competitive Advantage</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value status-live">LIVE</span>
+                    <span class="stat-label">Production Status</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Challenge Section -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">01</span>
+                THE CHALLENGE
+            </h2>
+            <div class="section-content">
+                <p>
+                    A learning technology company needed to accelerate engineering velocity and reduce repetitive development 
+                    work across their growing codebase. Generic coding assistants like GitHub Copilot provided broad suggestions 
+                    but lacked deep understanding of the company's specific architecture, patterns, and conventions:
+                </p>
+                <ul class="challenge-list">
+                    <li><strong>Generic Responses:</strong> Mainstream assistants suggested public internet patterns instead of company-specific implementations</li>
+                    <li><strong>Context Gap:</strong> No awareness of internal architecture decisions, folder structure, or coding standards</li>
+                    <li><strong>Onboarding Friction:</strong> New developers spent weeks learning project conventions and finding relevant code examples</li>
+                    <li><strong>Repetitive Boilerplate:</strong> Teams repeatedly wrote similar authentication configs, database integrations, and API handlers</li>
+                    <li><strong>Inconsistent Patterns:</strong> Without centralized guidance, different developers implemented similar features differently</li>
+                    <li><strong>Knowledge Silos:</strong> Best practices and architectural decisions lived in senior developers' heads rather than accessible tools</li>
+                </ul>
+                <p>
+                    The company needed a domain-specific AI coding assistant trained on their actual GitHub repositories, 
+                    providing project-aware code generation, refactoring suggestions, and troubleshooting help directly inside 
+                    the developer workflow—delivering an early-to-market advantage over teams using generic assistants.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">02</span>
+                SOLUTION ARCHITECTURE
+            </h2>
+            <div class="section-content">
+                <div class="image-showcase">
+                    <img src="images/project_image_4_3.jpeg" alt="System Architecture Diagram">
+                    <p class="image-caption">End-to-end architecture: GitHub ingestion → knowledge curation → RAG pipeline → custom LLM → IDE integrations + web interface</p>
+                </div>
+                
+                <p>
+                    Built a production-ready code assistant combining custom LLM fine-tuning, RAG over company GitHub repositories, 
+                    and seamless integrations into Cursor, VS Code, and a standalone web chat interface.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>GitHub-Trained Knowledge</h3>
+                        <p>
+                            Ingestion pipeline pulls and structures company repositories into digestible knowledge chunks, 
+                            enabling accurate retrieval and reduced hallucinations on internal patterns.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Custom LLM Behavior Layer</h3>
+                        <p>
+                            Fine-tuned model focused on engineering outcomes: working code with minimal explanation, 
+                            internal patterns over generic examples, consistent style and naming.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Multi-Environment Access</h3>
+                        <p>
+                            Integrated directly into Cursor + VS Code for in-IDE assistance, plus standalone web chat 
+                            for quick Q&A, onboarding, and feature discovery.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Continuous Improvement Loop</h3>
+                        <p>
+                            Feedback mechanism captures developer usage patterns to improve repo-specific answers, 
+                            reduce noise, and tune toward "coding-first" responses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">03</span>
+                TECHNICAL IMPLEMENTATION
+            </h2>
+            <div class="section-content">
+                
+                <!-- Knowledge Acquisition -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Knowledge Acquisition & Curation</h3>
+                    <p>
+                        Built a GitHub ingestion pipeline that pulls company repositories and transforms them into 
+                        structured, searchable knowledge optimized for accurate code assistant responses.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Data Sources:</span>
+                            <span class="tech-value">GitHub repos (framework conventions, services, configs, recurring patterns)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Normalization:</span>
+                            <span class="tech-value">Code context chunked by repo/module/service for digestible retrieval</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Parsing Strategy:</span>
+                            <span class="tech-value">Repository structure analysis, dependency mapping, pattern extraction</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Boundaries Defined:</span>
+                            <span class="tech-value">What can be answered, what requires verification, what should never be auto-generated (security-sensitive logic)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Model Build -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Custom Model Build & Evaluation</h3>
+                    <p>
+                        Developed a custom LLM behavior layer optimized for engineering outcomes rather than generic 
+                        conversational AI, with strict guardrails for security and consistency.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Model Tuning:</span>
+                            <span class="tech-value">Fine-tuned LLM or instruction-tuned wrapper with retrieval grounding</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Behavior Principles:</span>
+                            <span class="tech-value">"Show working code + explain minimally", "Prefer internal patterns", "Consistent style/naming/error handling"</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Task Routing:</span>
+                            <span class="tech-value">Generate / refactor / debug / explain / recommend prompts</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Test Coverage:</span>
+                            <span class="tech-value">Authentication config, database integrations, API handlers, utilities, refactors, debugging scenarios</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAG Implementation -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Knowledge Retrieval (RAG Architecture)</h3>
+                    <p>
+                        Implemented semantic search over the company codebase using embeddings and vector database, 
+                        enabling context-aware code suggestions grounded in actual internal implementations.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Embedding Pipeline:</span>
+                            <span class="tech-value">Code chunks → vector embeddings → semantic search index</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Vector Database:</span>
+                            <span class="tech-value">pgvector / Pinecone / Weaviate (or equivalent) for similarity search</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Context Assembly:</span>
+                            <span class="tech-value">Strict token budgeting with relevancy scoring for optimal LLM input</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Retrieval Strategy:</span>
+                            <span class="tech-value">Query developer request → Find similar code patterns → Assemble context → Generate response</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cursor Integration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Cursor IDE Integration</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_4.jpeg" alt="Cursor IDE with Custom LLM">
+                        <p class="image-caption">Cursor IDE showing connected custom model (edutrak_ai_code_v3) with provider configuration and chat interface</p>
+                    </div>
+                    <p>
+                        Integrated the custom code assistant directly into Cursor IDE, enabling developers to access 
+                        company-specific code generation without leaving their development environment.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Integration Type:</span>
+                            <span class="tech-value">Custom model connection via Ollama provider in Cursor</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Features Available:</span>
+                            <span class="tech-value">Inline code suggestions, chat panel, contextual assistance, file mentions</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Model Access:</span>
+                            <span class="tech-value">Direct connection to internal LLM endpoint with authentication</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Developer Experience:</span>
+                            <span class="tech-value">Seamless in-IDE workflow with company-aware code completion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Generation Examples -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Code Generation & Completion Modes</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_4_2.jpeg" alt="Generated Code Example">
+                        <p class="image-caption">AI-generated Laravel configuration code showing password reset settings with proper structure and internal conventions</p>
+                    </div>
+                    <p>
+                        The assistant generates production-ready code following company patterns, complete with proper 
+                        documentation, error handling, and adherence to internal coding standards.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output Format:</span>
+                            <span class="tech-value">Working code with minimal explanation, patch-style answers, implementation steps</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Code Quality:</span>
+                            <span class="tech-value">Consistent naming, proper structure, inline documentation, framework-aligned patterns</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Common Tasks:</span>
+                            <span class="tech-value">Authentication config, database models, API routes, utility functions, test scaffolding</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Context Awareness:</span>
+                            <span class="tech-value">References existing internal implementations rather than generic examples</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Interface -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Interactive Chat Testing</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_4_1.jpeg" alt="Chat Interface with Code Output">
+                        <p class="image-caption">Web chat interface demonstrating Q&A functionality with detailed code examples and explanations for developer queries</p>
+                    </div>
+                    <p>
+                        Built an interactive chat interface for testing model responses, developer Q&A, and exploring 
+                        codebase patterns without opening an IDE.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Use Cases:</span>
+                            <span class="tech-value">Quick code questions, architectural guidance, pattern discovery, onboarding support</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Response Style:</span>
+                            <span class="tech-value">Code-first with explanations, references to internal repos, suggested next steps</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Session Handling:</span>
+                            <span class="tech-value">Conversation history, prompt templates, saved queries</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web UI Frontend -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Standalone Web Chat Interface</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_4_4.jpeg" alt="Open WebUI Frontend">
+                        <p class="image-caption">Open WebUI frontend providing accessible web-based chat interface with suggested prompts and voice input support</p>
+                    </div>
+                    <p>
+                        Deployed a standalone web application using Open WebUI, making the code assistant accessible 
+                        to all team members regardless of their IDE setup.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Frontend Stack:</span>
+                            <span class="tech-value">Open WebUI (lightweight React/Next.js-based interface)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Features:</span>
+                            <span class="tech-value">Chat history, model selection, prompt templates, voice input, code highlighting</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Accessibility:</span>
+                            <span class="tech-value">Browser-based access for non-IDE workflows, onboarding, documentation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Suggested Prompts:</span>
+                            <span class="tech-value">Pre-built examples for common tasks (SQL config, options trading explanations, etc.)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Infrastructure -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Backend & API Infrastructure</h3>
+                    <p>
+                        Built scalable backend services to handle inference requests, authentication, logging, 
+                        and role-based access across multiple developer teams and repositories.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">API Gateway:</span>
+                            <span class="tech-value">Inference request handling with authentication and rate limiting</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Telemetry:</span>
+                            <span class="tech-value">Request logging, latency tracking, token usage monitoring, prompt category analysis</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Security:</span>
+                            <span class="tech-value">Role-based access to repos/modules, guardrails against insecure code generation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Quality Controls:</span>
+                            <span class="tech-value">Detection of secrets, auth bypass patterns, "prefer internal examples" enforcement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deployment & Iteration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Deployment & Continuous Improvement</h3>
+                    <p>
+                        Released early and iterated based on developer feedback, continuously improving answer quality, 
+                        reducing noise, and tuning the assistant toward practical coding assistance.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Release Strategy:</span>
+                            <span class="tech-value">Internal beta → Team feedback → Iterative improvements → Production rollout</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Improvements Made:</span>
+                            <span class="tech-value">Better repo-specific answers, reduced completion noise, more "coding-first" approach</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Feedback Loop:</span>
+                            <span class="tech-value">Usage analytics, developer ratings, manual review of problematic outputs</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Optimization Focus:</span>
+                            <span class="tech-value">Speed of response, accuracy of suggestions, adherence to company patterns</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">04</span>
+                TECHNOLOGY STACK
+            </h2>
+            <div class="section-content">
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>LLM & AI Infrastructure</h3>
+                        <ul>
+                            <li>Custom fine-tuned LLM</li>
+                            <li>Instruction-tuned wrapper + RAG</li>
+                            <li>Prompt routing (generate/refactor/debug)</li>
+                            <li>Guardrails for secure code generation</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Knowledge & Retrieval</h3>
+                        <ul>
+                            <li>GitHub ingestion pipeline</li>
+                            <li>Code parsing & chunking</li>
+                            <li>Vector embeddings (pgvector/Pinecone)</li>
+                            <li>Semantic search with token budgeting</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>IDE & Developer Tools</h3>
+                        <ul>
+                            <li>VS Code extension integration</li>
+                            <li>Cursor IDE custom model connection</li>
+                            <li>Inline suggestions & chat panel</li>
+                            <li>Contextual coding assistance</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Web Interface & Backend</h3>
+                        <ul>
+                            <li>Open WebUI (React/Next.js)</li>
+                            <li>API gateway with authentication</li>
+                            <li>Request logging & telemetry</li>
+                            <li>Session handling & prompt templates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">05</span>
+                RESULTS & BUSINESS IMPACT
+            </h2>
+            <div class="section-content">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">🚀</div>
+                        <h3>Accelerated Development Velocity</h3>
+                        <p>Faster boilerplate generation, repo-aligned implementations, and reduced refactoring/debugging cycles</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📚</div>
+                        <h3>Improved Onboarding</h3>
+                        <p>New developers get instant access to internal patterns and architectural decisions through AI-powered code examples</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🎯</div>
+                        <h3>Consistent Code Quality</h3>
+                        <p>Standardized patterns across teams with AI enforcing company conventions and best practices</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⚡</div>
+                        <h3>Multi-Environment Access</h3>
+                        <p>Production-ready assistant works in Cursor, VS Code, and web chat—single AI entry point across workflows</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🏆</div>
+                        <h3>Competitive Time Advantage</h3>
+                        <p>Launched ahead of mainstream assistants (Gemini Code Assistant) with stronger value from internal training</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🔒</div>
+                        <h3>Internal Knowledge Security</h3>
+                        <p>Company patterns and architecture stay private—trained on internal GitHub, not public internet code</p>
+                    </div>
+                </div>
+
+                <div class="outcome-summary">
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The Custom Dev Copilot transformed engineering productivity by delivering a domain-specific AI assistant 
+                        that understands the company's actual codebase, architectural patterns, and development conventions. 
+                        By training on internal GitHub repositories rather than generic public code, the system provides 
+                        contextually relevant suggestions that accelerate development while maintaining code quality and consistency.
+                    </p>
+                    <p>
+                        The multi-environment deployment strategy—Cursor IDE integration, VS Code extension, and standalone 
+                        web chat—ensures developers can access AI assistance wherever they work. The early-to-market advantage 
+                        delivers immediate productivity gains while competitors rely on generic assistants that lack deep 
+                        project understanding. Continuous improvement through developer feedback creates a virtuous cycle 
+                        where the assistant becomes more valuable over time.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <nav class="project-footer-nav">
+            <a href="project-3.html" class="nav-button">
+                <span class="arrow-left">←</span>
+                <span>PREVIOUS PROJECT</span>
+            </a>
+            <a href="index.html" class="nav-button">
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourprofile" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="#" class="footer-link" onclick="window.location.href='mailto:' + ['roman.rushey','gmail.com'].join('@'); return false;">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="footer-link">LINKEDIN</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://t.me/yourusername" class="footer-link">TELEGRAM</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 ROMAN PIKLIAEV • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
