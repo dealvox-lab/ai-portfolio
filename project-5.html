@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Quote & Contract Automation Bot - Roman Pikliaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="project-nav">
+            <a href="index.html" class="back-link">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <div class="project-number-badge">PROJECT_05</div>
+        </nav>
+
+        <!-- Project Header -->
+        <header class="project-header">
+            <div class="project-tag">CONSTRUCTION & REPAIR COMPANY</div>
+            <h1 class="project-title-main">Field Quote & Contract Automation Bot</h1>
+            <p class="project-tagline">
+                AI-powered chatbot enabling field crews to capture project scope, generate accurate quotes, and produce contract-ready paperwork in minutes during client meetings
+            </p>
+            
+            <div class="project-stats">
+                <div class="stat-item">
+                    <span class="stat-value">+17%</span>
+                    <span class="stat-label">Contract Signing Rate</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Minutes</span>
+                    <span class="stat-label">Quote Delivery Time</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">PDF+AI</span>
+                    <span class="stat-label">Document Recognition</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value status-live">LIVE</span>
+                    <span class="stat-label">Production Status</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Challenge Section -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">01</span>
+                THE CHALLENGE
+            </h2>
+            <div class="section-content">
+                <p>
+                    Construction and repair field teams faced a critical sales conversion bottleneck: generating accurate quotes 
+                    and contracts required manual back-office processing that took hours or days, causing potential clients to 
+                    lose interest or choose competitors who could respond faster:
+                </p>
+                <ul class="challenge-list">
+                    <li><strong>Slow Quote Turnaround:</strong> Field staff captured client requirements on-site but had to wait for office staff to calculate pricing and generate proposals</li>
+                    <li><strong>Lost "Hot" Clients:</strong> Critical decision window closed while waiting for quotes, with prospects choosing faster-responding competitors</li>
+                    <li><strong>Manual Estimation Errors:</strong> Human calculation mistakes led to underpricing (lost profit) or overpricing (lost deals)</li>
+                    <li><strong>Inconsistent Quoting:</strong> Different field staff and estimators produced varying quotes for similar work</li>
+                    <li><strong>Messy Input Data:</strong> PDF drawings, photos, and partial documentation arrived in inconsistent formats</li>
+                    <li><strong>Complex Back-and-Forth:</strong> Multiple rounds of clarification between field staff, clients, and office created delays and frustration</li>
+                </ul>
+                <p>
+                    The company needed a field-ready AI system that could understand messy inputs (PDF drawings, photos, verbal 
+                    descriptions), guide crews through structured data capture, calculate accurate quotes automatically, and 
+                    produce professional contract documents—all while the client was still on-site and engaged.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">02</span>
+                SOLUTION ARCHITECTURE
+            </h2>
+            <div class="section-content">
+                <div class="image-showcase">
+                    <img src="images/project_image_5_3.jpeg" alt="System Architecture Diagram">
+                    <p class="image-caption">Dual architecture: Left - inbound lead flow with Cast CRM and AirOps automation; Right - client management with construction CRM and AI environment integration</p>
+                </div>
+                
+                <p>
+                    Built an intelligent chatbot system combining PDF recognition, guided conversation flow, automated 
+                    quote calculation, and contract generation—delivering complete proposals in minutes while field 
+                    teams are still with the client.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Conversational Data Capture</h3>
+                        <p>
+                            AI chatbot guides field crews through structured project scoping with intelligent questioning, 
+                            collecting all required details for accurate quotes and contracts.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>PDF Drawing Recognition</h3>
+                        <p>
+                            Document AI extracts project requirements from messy PDF drawings, photos, and partial 
+                            documentation, handling imperfect inputs and inconsistent layouts.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Automated Quote Engine</h3>
+                        <p>
+                            Real-time cost calculation converts scope items into itemized quotes with unit pricing, 
+                            quantities, subtotals, and professional formatting.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Contract Generation</h3>
+                        <p>
+                            Dynamic templating produces manager-ready contract documents with client details, pricing, 
+                            legal clauses, and service terms automatically injected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">03</span>
+                TECHNICAL IMPLEMENTATION
+            </h2>
+            <div class="section-content">
+                
+                <!-- Chatbot Interface -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Human-Like Field Chatbot Interface</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_5.jpeg" alt="Chatbot Conversation Flow">
+                        <p class="image-caption">Interactive chatbot dialog confirming client details, collecting product specifications, and guiding field staff through structured quote creation</p>
+                    </div>
+                    <p>
+                        Delivered as a mobile/tablet-friendly chatbot interface designed for field crews to use on-site 
+                        during client meetings, with conversational AI guiding them through project scoping.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Interface Type:</span>
+                            <span class="tech-value">Conversational chatbot (mobile/tablet optimized)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Guided Questioning:</span>
+                            <span class="tech-value">Intelligent prompts to collect dimensions, materials, conditions, optional services</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Data Validation:</span>
+                            <span class="tech-value">Real-time input verification ensuring completeness before quote generation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Conversation Flow:</span>
+                            <span class="tech-value">Client confirmation → Product selection → Quantity input → Quote generation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PDF Recognition -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Document Parsing & PDF Recognition Layer</h3>
+                    <p>
+                        Implemented PDF and document AI to ingest job drawings and extract key project signals, handling 
+                        messy real-world inputs that field teams encounter.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Input Handling:</span>
+                            <span class="tech-value">PDF drawings, photos, multi-page documents, inconsistent layouts</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Extraction Targets:</span>
+                            <span class="tech-value">Scope items, measurements, location context, material specifications</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Preprocessing:</span>
+                            <span class="tech-value">Document normalization to handle low-quality PDFs and partial information</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Integration:</span>
+                            <span class="tech-value">Extracted data flows into structured project model for quote calculation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Structured Data Model -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Structured Project Data Model</h3>
+                    <p>
+                        Normalized field responses and extracted document data into a clean project JSON schema, 
+                        ensuring consistent data structure regardless of input source.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Client Data:</span>
+                            <span class="tech-value">Identity, address, contact information, visit date</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Scope Items:</span>
+                            <span class="tech-value">Line items with quantities, materials, dimensions, service types</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Pricing Logic:</span>
+                            <span class="tech-value">Unit pricing rules, calculation formulas, discount structures</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Contract Metadata:</span>
+                            <span class="tech-value">Signature-ready fields, legal terms, service agreements</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote Calculation -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Quote Calculation Engine</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_5_2.jpeg" alt="Generated Quote Document">
+                        <p class="image-caption">AI-generated quote showing client information, itemized products (Gravel Base, Retaining Wall Drainage, Concrete Dumpster) with quantities, descriptions, costs, and calculated totals</p>
+                    </div>
+                    <p>
+                        Built automated quote composition that converts scope items into professional, itemized cost 
+                        breakdowns with proper formatting and calculation accuracy.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Calculation Logic:</span>
+                            <span class="tech-value">Unit pricing × quantity, subtotal aggregation, total calculation</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Pricing Structure:</span>
+                            <span class="tech-value">Per square foot rates, per-piece costs, optional add-ons and bundles</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output Format:</span>
+                            <span class="tech-value">Human-readable quote document + structured JSON for CRM/accounting systems</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Itemization:</span>
+                            <span class="tech-value">Product name, quantity, description, unit cost, line total, grand total</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contract Generation -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Contract Generation Automation</h3>
+                    <p>
+                        Generated customized contracts using dynamic templating, injecting client and project data into 
+                        professional document formats with legal clauses and service terms.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Template System:</span>
+                            <span class="tech-value">Dynamic contract generation with client + project field injection</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Document Sections:</span>
+                            <span class="tech-value">Client info, pricing breakdown, scope of work, legal clauses, service terms</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Customization:</span>
+                            <span class="tech-value">Job-type specific templates while maintaining consistent structure</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output:</span>
+                            <span class="tech-value">Manager-ready contract document without manual formatting required</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workflow Orchestration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Workflow Orchestration & Delivery Routing</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_5_1.jpeg" alt="AirOps Workflow Dashboard">
+                        <p class="image-caption">AirOps workflow management showing automation flows: Quote correction chatbot, UUID share API, Send API with latest quote, Saves agent output, Takes prospect data, Consultant chatbot</p>
+                    </div>
+                    <p>
+                        Implemented automation flows using AirOps to orchestrate the entire quote-to-contract pipeline, 
+                        routing outputs to managers and handling failure cases gracefully.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Automation Platform:</span>
+                            <span class="tech-value">AirOps workflows for orchestration, API routing, data management</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Workflow Steps:</span>
+                            <span class="tech-value">Capture → Parse → Calculate → Generate contract → Route to manager</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Delivery Outputs:</span>
+                            <span class="tech-value">Quote summary, calculated totals, contract document, extracted job details</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Fail-Safe Handling:</span>
+                            <span class="tech-value">Partial inputs produce usable drafts instead of blocking entire flow</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">CRM Integration:</span>
+                            <span class="tech-value">Cast CRM and Construction CRM (Contractor Foreman, AccuLynx, RepairCRM) connections</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Multi-System Integration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">CRM & Business System Integration</h3>
+                    <p>
+                        Designed the system to integrate with multiple CRM platforms and business tools, ensuring 
+                        quote and contract data flows into existing operational systems.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Lead Management:</span>
+                            <span class="tech-value">Inbound leads flow through Cast CRM with automated routing</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Construction CRM:</span>
+                            <span class="tech-value">Integration with Contractor Foreman, AccuLynx, RepairCRM for project management</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Accounting Integration:</span>
+                            <span class="tech-value">Quote data formatted for QuickBooks, Xero, and other accounting platforms</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Communication Tools:</span>
+                            <span class="tech-value">Client communication via email campaigns and calls from integrated systems</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">04</span>
+                TECHNOLOGY STACK
+            </h2>
+            <div class="section-content">
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>Conversational AI</h3>
+                        <ul>
+                            <li>Chatbot interface (mobile/tablet)</li>
+                            <li>Guided questioning logic</li>
+                            <li>Natural language understanding</li>
+                            <li>Input validation & verification</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Document AI & Recognition</h3>
+                        <ul>
+                            <li>PDF parsing and extraction</li>
+                            <li>Image/photo recognition</li>
+                            <li>Document preprocessing</li>
+                            <li>Multi-format input handling</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Automation & Orchestration</h3>
+                        <ul>
+                            <li>AirOps workflow platform</li>
+                            <li>API routing and management</li>
+                            <li>Fail-safe error handling</li>
+                            <li>Automated delivery routing</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>CRM & Business Systems</h3>
+                        <ul>
+                            <li>Cast CRM integration</li>
+                            <li>Construction CRM platforms</li>
+                            <li>Accounting software (QB/Xero)</li>
+                            <li>Email & communication tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">05</span>
+                RESULTS & BUSINESS IMPACT
+            </h2>
+            <div class="section-content">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">📈</div>
+                        <h3>+17% Contract Signing Rate</h3>
+                        <p>Improved conversion by delivering professional proposals while clients are still engaged and "hot"</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⚡</div>
+                        <h3>Minutes vs. Hours/Days</h3>
+                        <p>Field teams generate complete quotes and contracts in minutes instead of waiting for back-office processing</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🎯</div>
+                        <h3>Eliminated Estimation Errors</h3>
+                        <p>Automated calculation removes human math mistakes that caused underpricing or lost deals</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📋</div>
+                        <h3>Consistent Quote Quality</h3>
+                        <p>Standardized quoting across all field staff with professional formatting and accurate pricing</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🔄</div>
+                        <h3>Reduced Back-and-Forth</h3>
+                        <p>Eliminated slow clarification cycles between field crews, clients, and office staff</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📱</div>
+                        <h3>Field-Ready Technology</h3>
+                        <p>Mobile-optimized chatbot enables on-site quote generation during client meetings</p>
+                    </div>
+                </div>
+
+                <div class="outcome-summary">
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The Field Quote & Contract Automation Bot transformed the construction sales process from a slow, 
+                        manual workflow into an intelligent, real-time system. By combining conversational AI, PDF recognition, 
+                        and automated quote generation, the solution eliminated the critical delay between client meetings and 
+                        proposal delivery—capturing deals during the high-intent decision window.
+                    </p>
+                    <p>
+                        The 17% increase in contract signing rate demonstrates the business impact of speed and consistency. 
+                        Field crews now deliver professional, accurate quotes in minutes while clients are still on-site, 
+                        reducing the risk of losing prospects to faster-responding competitors. The automated calculation 
+                        engine ensures pricing accuracy while the contract generation system produces manager-ready documents 
+                        without manual formatting, creating a scalable, repeatable sales process that maintains quality at volume.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <nav class="project-footer-nav">
+            <a href="project-4.html" class="nav-button">
+                <span class="arrow-left">←</span>
+                <span>PREVIOUS PROJECT</span>
+            </a>
+            <a href="index.html" class="nav-button">
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourprofile" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="#" class="footer-link" onclick="window.location.href='mailto:' + ['roman.rushey','gmail.com'].join('@'); return false;">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="footer-link">LINKEDIN</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://t.me/yourusername" class="footer-link">TELEGRAM</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 ROMAN PIKLIAEV • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
