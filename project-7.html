@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Outreach Agent - Roman Pikliaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="project-nav">
+            <a href="index.html" class="back-link">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <div class="project-number-badge">PROJECT_07</div>
+        </nav>
+
+        <!-- Project Header -->
+        <header class="project-header">
+            <div class="project-tag">BROKERAGE OUTBOUND SALES</div>
+            <h1 class="project-title-main">AI Voice Outreach Agent with IVR Navigation</h1>
+            <p class="project-tagline">
+                Production-ready AI calling system navigating IVR menus, detecting voicemail, handling gatekeepers, and syncing structured call outcomes to Dynamics 365 CRM
+            </p>
+            
+            <div class="project-stats">
+                <div class="stat-item">
+                    <span class="stat-value">1000s</span>
+                    <span class="stat-label">Calls Automated</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">5-Fig</span>
+                    <span class="stat-label">Budget Savings</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">D365</span>
+                    <span class="stat-label">CRM Integration</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value status-live">LIVE</span>
+                    <span class="stat-label">Production Status</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Challenge Section -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">01</span>
+                THE CHALLENGE
+            </h2>
+            <div class="section-content">
+                <p>
+                    A brokerage company's outbound sales team faced systematic obstacles reaching decision-makers: IVR menu 
+                    systems, voicemail screening, and gatekeeper friction blocked most connection attempts, while manual 
+                    calling workflows created inefficiency and inconsistent follow-up:
+                </p>
+                <ul class="challenge-list">
+                    <li><strong>IVR Navigation Barriers:</strong> Complex phone menu systems blocked access to decision-makers, requiring human agents to manually navigate menus</li>
+                    <li><strong>Voicemail Detection Gaps:</strong> Inability to distinguish between voicemail systems and live answers led to wasted agent time and poor call classification</li>
+                    <li><strong>Gatekeeper Friction:</strong> Receptionists and assistants screening calls with questions like "what is this regarding?" created additional conversion barriers</li>
+                    <li><strong>Manual Call Classification:</strong> Sales reps manually logging call outcomes (no answer, voicemail, connected, qualified) consumed valuable selling time</li>
+                    <li><strong>CRM Sync Delays:</strong> Lag between call completion and CRM updates prevented real-time prioritization and follow-up routing</li>
+                    <li><strong>Scalability Limits:</strong> Human-dependent outreach couldn't scale to thousands of call attempts without proportional headcount increases</li>
+                </ul>
+                <p>
+                    The company needed an AI voice agent that could autonomously navigate IVR systems, detect and classify 
+                    call outcomes (voicemail, no answer, live connection), handle initial gatekeeper interactions, and 
+                    automatically sync structured call intelligence into Dynamics 365—all while operating at scale without 
+                    manual supervision.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">02</span>
+                SOLUTION ARCHITECTURE
+            </h2>
+            <div class="section-content">
+                <p>
+                    Built a production AI calling system combining voice conversation engine, IVR navigation logic, voicemail 
+                    detection, webhook-driven event processing, and Dynamics 365 synchronization to automate high-volume 
+                    outbound calling with intelligent decision-making.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>AI Voice Conversation Engine</h3>
+                        <p>
+                            Retell-style voice agent managing live phone calls with speech-to-text, low-latency responses, 
+                            and guardrails for goal-driven outbound behavior.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>IVR & Voicemail Detection</h3>
+                        <p>
+                            Decision logic identifying IVR menu prompts vs. human responses, voicemail systems, and 
+                            gatekeeper patterns with dynamic routing strategy.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Webhook-Driven Intelligence</h3>
+                        <p>
+                            Event pipeline collecting call outcomes (duration, end reason, sentiment, session ID) with 
+                            structured payloads for CRM automation.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Dynamics 365 Sync</h3>
+                        <p>
+                            Automated CRM integration updating activity records, writing dispositions, routing leads to 
+                            next stages with deduplication and safe update handling.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">03</span>
+                TECHNICAL IMPLEMENTATION
+            </h2>
+            <div class="section-content">
+                
+                <!-- Voice Engine -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Voice & Conversation Engine</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_7_2.jpeg" alt="Call History Dashboard">
+                        <p class="image-caption">Production call history showing real-time phone call tracking with duration, cost, session IDs, end reasons (voicemail reached, user hangup, dial no answer), session status, and user sentiment</p>
+                    </div>
+                    <p>
+                        Integrated AI calling infrastructure managing live phone conversations with speech-to-text, 
+                        natural language understanding, and controlled turn-taking for professional outbound interactions.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Voice Platform:</span>
+                            <span class="tech-value">Retell-style AI agent pattern for live call management</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Speech Processing:</span>
+                            <span class="tech-value">Speech-to-text conversion, low-latency agent responses, natural conversation flow</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Behavioral Guardrails:</span>
+                            <span class="tech-value">Short controlled turns, goal-driven routing, escalation handling</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Call Outcomes:</span>
+                            <span class="tech-value">Voicemail reached, user hangup, dial no answer, connected, qualified</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Cost Tracking:</span>
+                            <span class="tech-value">Per-call cost monitoring ($0.03-$0.12 per call) with duration-based pricing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IVR Detection -->
+                <div class="tech-block">
+                    <h3 class="tech-title">IVR & Voicemail Detection Logic</h3>
+                    <p>
+                        Built intelligent decision logic to distinguish between automated systems and human responses, 
+                        enabling the agent to navigate phone menus and detect voicemail with high accuracy.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Detection Capabilities:</span>
+                            <span class="tech-value">IVR menu prompts vs. human responses, voicemail playback/beep detection, "leave a message" flows</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Gatekeeper Patterns:</span>
+                            <span class="tech-value">"What is this regarding?", "Who are you trying to reach?", receptionist screening</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Routing Strategy:</span>
+                            <span class="tech-value">Dynamic prompt adjustment based on detected system state (IVR vs. live conversation)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">State Management:</span>
+                            <span class="tech-value">Context-aware pathing for different call scenarios (menu navigation, voicemail handling, live transfer)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sales Orchestration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Sales Outreach Orchestration</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_7_1.jpeg" alt="Workflow Management Dashboard">
+                        <p class="image-caption">Multi-step workflow orchestration showing lead processing stages: "Step 1A: New lead - Check & send to Retell" (19,308 enrolled), "Step 2: Pick up & Process Call" (32,518 enrolled), published workflows with enrollment tracking</p>
+                    </div>
+                    <p>
+                        Implemented multi-step workflows managing the complete lead-to-call lifecycle with scalable 
+                        automation supporting thousands of simultaneous call attempts.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Workflow Pipeline:</span>
+                            <span class="tech-value">Lead intake → dialing → call execution → post-call classification → next-step routing</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Scale Operations:</span>
+                            <span class="tech-value">Thousands of call attempts without manual supervision (19K-32K enrollments per workflow)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Workflow Stages:</span>
+                            <span class="tech-value">New lead check & Retell routing, call pickup & processing, D365 appointment sync, Cal.com booking</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Status Tracking:</span>
+                            <span class="tech-value">Published/Draft status, enrollment counts, last updated timestamps, version control</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Webhook Pipeline -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Webhook-Driven Event Pipeline</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_7.jpeg" alt="AB Retell Webhooks Dashboard">
+                        <p class="image-caption">Real-time webhook execution history showing instant triggers with success status (green), 1-second duration, credits usage (2-3 per operation), consistent 2-3 operations per webhook</p>
+                    </div>
+                    <p>
+                        Created webhook collector receiving call end events and extracting structured outcomes for 
+                        downstream CRM automation with consistent formatting and reliability.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Event Collection:</span>
+                            <span class="tech-value">Call end event webhooks with instant triggering and <1 second processing</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Extracted Data:</span>
+                            <span class="tech-value">Duration, end reason, sentiment tags, session ID, call status, disconnect reason</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Disposition Types:</span>
+                            <span class="tech-value">Voicemail reached, hang-up, not connected, human vs. agent disconnect classification</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Payload Structure:</span>
+                            <span class="tech-value">CRM-friendly format with consistent structure for automation (JSON with standardized fields)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Execution Metrics:</span>
+                            <span class="tech-value">Success tracking, credit usage (2-3 per webhook), operation counts, timestamp logging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CRM Integration -->
+                <div class="tech-block">
+                    <h3 class="tech-title">CRM Integration (Dynamics 365)</h3>
+                    <p>
+                        Implemented automated Dynamics 365 sync layer pushing structured call intelligence into the sales 
+                        workflow with real-time activity updates and intelligent lead routing.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Activity Updates:</span>
+                            <span class="tech-value">Automatic lead/contact record updates with call timestamp, duration, outcome</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Disposition Labels:</span>
+                            <span class="tech-value">Call outcome tagging (voicemail reached, connected, no answer, qualified)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Lead Routing:</span>
+                            <span class="tech-value">Automatic stage progression (follow-up needed, invalid contact, voicemail retry, qualified)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Data Integrity:</span>
+                            <span class="tech-value">Deduplication logic, safe update handling to prevent double-posting call results</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Prioritization:</span>
+                            <span class="tech-value">Clean call signals enabling sales teams to prioritize follow-ups based on real intent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reliability Engineering -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Automation & Reliability Engineering</h3>
+                    <p>
+                        Designed production-grade system with retry-safety, observability, and stable handling of 
+                        high-frequency call events through robust telemetry and error management.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Retry Safety:</span>
+                            <span class="tech-value">Idempotent webhook processing preventing duplicate CRM entries</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Observability:</span>
+                            <span class="tech-value">Run logs for each webhook execution, success/failure tracking, duration monitoring</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Event Handling:</span>
+                            <span class="tech-value">Stable processing of high-frequency call events (instant triggers, <1s execution)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Iteration Process:</span>
+                            <span class="tech-value">Optimized through real call histories, webhook feedback, conversion metrics</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Production Readiness:</span>
+                            <span class="tech-value">High-volume telemetry validation ensuring IVR logic reliability and CRM sync stability</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">04</span>
+                TECHNOLOGY STACK
+            </h2>
+            <div class="section-content">
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>Voice & Conversation AI</h3>
+                        <ul>
+                            <li>Retell AI calling infrastructure</li>
+                            <li>Speech-to-text processing</li>
+                            <li>Low-latency agent responses</li>
+                            <li>Natural language understanding</li>
+                            <li>Behavioral guardrails</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Detection & Classification</h3>
+                        <ul>
+                            <li>IVR menu detection logic</li>
+                            <li>Voicemail identification</li>
+                            <li>Gatekeeper pattern recognition</li>
+                            <li>Dynamic routing strategy</li>
+                            <li>Sentiment analysis</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Workflow Automation</h3>
+                        <ul>
+                            <li>Multi-step lead processing</li>
+                            <li>Webhook event collection</li>
+                            <li>Post-call classification</li>
+                            <li>Next-step routing logic</li>
+                            <li>Scale orchestration (1000s calls)</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>CRM & Integration</h3>
+                        <ul>
+                            <li>Dynamics 365 sync layer</li>
+                            <li>Activity record updates</li>
+                            <li>Disposition tagging</li>
+                            <li>Lead stage routing</li>
+                            <li>Deduplication & safe updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">05</span>
+                RESULTS & BUSINESS IMPACT
+            </h2>
+            <div class="section-content">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">💰</div>
+                        <h3>Five-Figure Budget Savings</h3>
+                        <p>Automated outbound calling eliminated manual dialer headcount while increasing call volume and quality</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🎯</div>
+                        <h3>Improved Decision-Maker Reach</h3>
+                        <p>AI navigation of IVR systems and gatekeeper handling increased successful connection rates</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📊</div>
+                        <h3>Clean Call Intelligence</h3>
+                        <p>Structured outcome classification (voicemail, no answer, connected, qualified) fed directly into CRM</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">⚡</div>
+                        <h3>Faster Follow-Up Loops</h3>
+                        <p>Real-time Dynamics 365 sync enabled immediate prioritization and next-step routing</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📈</div>
+                        <h3>Increased Conversion Efficiency</h3>
+                        <p>Better call classification and prioritization improved overall outbound campaign performance</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🔄</div>
+                        <h3>Scalable Automation</h3>
+                        <p>System processes thousands of call attempts without manual supervision or proportional headcount growth</p>
+                    </div>
+                </div>
+
+                <div class="outcome-summary">
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The AI Voice Outreach Agent transformed brokerage outbound sales from a manual, labor-intensive 
+                        process into an intelligent, scalable automation system. By combining voice conversation AI, IVR 
+                        navigation logic, and voicemail detection, the solution eliminated the systematic barriers that 
+                        previously prevented decision-maker access—navigating phone menus, detecting automated systems, 
+                        and handling gatekeeper interactions without human intervention.
+                    </p>
+                    <p>
+                        The webhook-driven event pipeline and Dynamics 365 integration created a closed-loop intelligence 
+                        system where every call outcome (voicemail reached, no answer, connected, qualified) automatically 
+                        updates CRM records and triggers appropriate follow-up workflows. This real-time synchronization 
+                        enables sales teams to prioritize leads based on actual call progression and intent signals rather 
+                        than manual logging delays. The five-figure budget savings combined with increased conversion 
+                        efficiency demonstrate the business value of replacing repetitive outbound work with production-ready 
+                        AI automation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <nav class="project-footer-nav">
+            <a href="project-6.html" class="nav-button">
+                <span class="arrow-left">←</span>
+                <span>PREVIOUS PROJECT</span>
+            </a>
+            <a href="index.html" class="nav-button">
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourprofile" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="#" class="footer-link" onclick="window.location.href='mailto:' + ['roman.rushey','gmail.com'].join('@'); return false;">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/yourprofile" class="footer-link">LINKEDIN</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://t.me/yourusername" class="footer-link">TELEGRAM</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 ROMAN PIKLIAEV • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
