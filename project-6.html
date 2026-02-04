@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits Document AI Intelligence System - Roman Pikliaev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="grid-overlay"></div>
+    
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="project-nav">
+            <a href="index.html" class="back-link">
+                <span class="arrow-left">←</span>
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+            <div class="project-number-badge">PROJECT_06</div>
+        </nav>
+
+        <!-- Project Header -->
+        <header class="project-header">
+            <div class="project-tag">BENEFITS ADMINISTRATION PLATFORM</div>
+            <h1 class="project-title-main">Benefits Document Intelligence System</h1>
+            <p class="project-tagline">
+                AI-powered document recognition system converting unstructured benefits plan updates into structured XML for automated benefits administration processing
+            </p>
+            
+            <div class="project-stats">
+                <div class="stat-item">
+                    <span class="stat-value">1000s</span>
+                    <span class="stat-label">Documents Processed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">AWS+Make</span>
+                    <span class="stat-label">Pipeline Stack</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">XML</span>
+                    <span class="stat-label">Structured Output</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value status-live">LIVE</span>
+                    <span class="stat-label">Production Status</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Challenge Section -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">01</span>
+                THE CHALLENGE
+            </h2>
+            <div class="section-content">
+                <p>
+                    A Benefits Administration Platform faced a massive annual bottleneck during Open Enrollment cycles: 
+                    processing benefits plan updates required manually interpreting thousands of unstructured documents 
+                    and rewriting benefit rules into structured XML format:
+                </p>
+                <ul class="challenge-list">
+                    <li><strong>Multi-Format Chaos:</strong> Updates arrived as PDFs, PowerPoint slides, emails, DOC files, spreadsheets—each with different layouts</li>
+                    <li><strong>Manual Interpretation:</strong> Human ops teams spent weeks reading plan updates and determining what changed year-over-year</li>
+                    <li><strong>XML Rewriting Burden:</strong> Every change required manual translation from human-readable text to machine-readable XML rules</li>
+                    <li><strong>Inconsistent Formatting:</strong> Different cities, employers, and plan providers used wildly different document structures</li>
+                    <li><strong>Scalability Limits:</strong> Thousands of historical documents needed processing, but manual workflow couldn't scale</li>
+                    <li><strong>Knowledge Dependency:</strong> Understanding "how humans read benefits updates" required domain expertise that was siloed in a few team members</li>
+                </ul>
+                <p>
+                    The company needed an AI system that could automatically detect, interpret, and convert annual benefits 
+                    plan changes from unstructured documents into structured XML outputs—processing thousands of documents 
+                    with accuracy while reducing human workload on repetitive "diff-and-rewrite" tasks.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">02</span>
+                SOLUTION ARCHITECTURE
+            </h2>
+            <div class="section-content">
+                <div class="image-showcase">
+                    <img src="images/project_image_6_2.jpeg" alt="Solution Architecture Diagram">
+                    <p class="image-caption">End-to-end pipeline: Multi-format document ingestion → AI extraction & change detection → XML generation → Human review → Production deployment</p>
+                </div>
+                
+                <p>
+                    Built a production-ready AI pipeline combining supervised learning, custom LLM training, and automated 
+                    XML generation to transform unstructured benefits documents into machine-readable rule updates.
+                </p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>Multi-Format Ingestion</h3>
+                        <p>
+                            Preprocessing layer normalizes PDFs, PowerPoint, emails, DOCs, and spreadsheets into consistent 
+                            text blocks with metadata for downstream AI interpretation.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Supervised Learning Dataset</h3>
+                        <p>
+                            Labelbox annotation workflow creates training data linking raw documents to extracted benefit 
+                            sections to structured change intent to XML output.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>AI Change Detection</h3>
+                        <p>
+                            Custom LLM pipeline identifies benefit categories, detects change types (new/removed/updated), 
+                            and outputs structured objects ready for XML transformation.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>XML Generation & Validation</h3>
+                        <p>
+                            Deterministic transformation layer converts AI outputs to consistent XML structures with 
+                            validation guards and human review workflows for edge cases.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">03</span>
+                TECHNICAL IMPLEMENTATION
+            </h2>
+            <div class="section-content">
+                
+                <!-- Discovery Phase -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Discovery & Document Domain Mapping</h3>
+                    <p>
+                        Analyzed historical benefits datasets and Open Enrollment patterns to define what "change" 
+                        means in practice and standardize extraction targets for consistent XML generation.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Data Analysis:</span>
+                            <span class="tech-value">Historical benefits datasets, year-over-year update patterns, Open Enrollment cycles</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Change Definition:</span>
+                            <span class="tech-value">Eligibility edits, tier changes, premiums, plan naming, rules logic, effective dates</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Schema Standardization:</span>
+                            <span class="tech-value">Consistent extraction targets mapped to XML generation requirements</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Domain Knowledge:</span>
+                            <span class="tech-value">Codified how humans read benefits updates into machine-learnable patterns</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Ingestion -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Data Ingestion & Normalization</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_6_3.jpeg" alt="Inconsistent Input Data">
+                        <p class="image-caption">Example of inconsistent multi-format input: PDFs, PowerPoint, emails, DOCs, spreadsheets—each requiring preprocessing for AI interpretation</p>
+                    </div>
+                    <p>
+                        The core challenge was handling wildly inconsistent input formats from different cities, employers, 
+                        and plan providers—each using unique document structures and layouts.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Input Formats:</span>
+                            <span class="tech-value">PDF plan summaries, PowerPoint OE decks, email exports, DOC files, spreadsheet checklists</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Preprocessing Layer:</span>
+                            <span class="tech-value">Normalization pipeline converting diverse formats into text blocks + metadata</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Consistency Goal:</span>
+                            <span class="tech-value">Standardized representation for downstream AI regardless of source format</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Format Handling:</span>
+                            <span class="tech-value">Different city plans, employer formats, PDF layouts all normalized to common structure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Annotation & Training -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Annotation & Supervised Learning Dataset</h3>
+                    <p>
+                        Built annotation workflow using Labelbox to create training data that teaches the model how 
+                        humans interpret benefits updates—not just text extraction but change understanding.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Annotation Platform:</span>
+                            <span class="tech-value">Labelbox for structured labeling of benefit entities, rule blocks, year-over-year deltas</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Training Data Flow:</span>
+                            <span class="tech-value">Raw document → extracted benefit section → structured change intent → XML output</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Critical Learning:</span>
+                            <span class="tech-value">Teaching model "how humans read benefits updates" vs. simple text extraction</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Dataset Quality:</span>
+                            <span class="tech-value">Clean, labeled examples linking documents to expected XML outputs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Pipeline -->
+                <div class="tech-block">
+                    <h3 class="tech-title">AI Extraction & Change Detection Pipeline</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_6_1.jpeg" alt="Backend Workflow Automation">
+                        <p class="image-caption">Make.com workflow orchestration showing document processing pipeline with error handling, routing, and output generation</p>
+                    </div>
+                    <p>
+                        Implemented custom LLM pipeline that extracts benefit content, identifies categories, detects 
+                        change types, and outputs structured objects—stable across diverse formatting styles.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Pipeline Steps:</span>
+                            <span class="tech-value">Extract & chunk content → Identify benefit category → Detect change intent → Output structured objects</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Change Detection:</span>
+                            <span class="tech-value">Classification of new, removed, or updated rules with confidence scoring</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Category Identification:</span>
+                            <span class="tech-value">Automatic classification into benefit types (eligibility, premiums, tiers, etc.)</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Stability Requirement:</span>
+                            <span class="tech-value">Model performance consistent across different cities, employers, and document formats</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Custom LLM Training:</span>
+                            <span class="tech-value">Trained on annotated benefits-change history with prompt/schema enforcement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XML Generation -->
+                <div class="tech-block">
+                    <h3 class="tech-title">XML Generation & Validation Layer</h3>
+                    <div class="image-showcase">
+                        <img src="images/project_image_6.jpeg" alt="Generated XML Output">
+                        <p class="image-caption">Sample structured XML output showing benefit rules with proper tags, attributes, and hierarchical structure for benefits administration system</p>
+                    </div>
+                    <p>
+                        Transformed AI-detected changes into deterministic XML structures with validation guards ensuring 
+                        consistency and usability for downstream benefits administration systems.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Transformation:</span>
+                            <span class="tech-value">AI structured objects → Deterministic XML with consistent formatting</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Validation Guards:</span>
+                            <span class="tech-value">Rule checking, schema validation, formatting consistency enforcement</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Human Review Workflow:</span>
+                            <span class="tech-value">Edge case approval/adjustment before final export for production use</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Output Format:</span>
+                            <span class="tech-value">XML benefit rules and updates ready for benefits administration platform ingestion</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Intermediate Objects:</span>
+                            <span class="tech-value">JSON step-level validation for debugging and quality assurance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workflow Automation -->
+                <div class="tech-block">
+                    <h3 class="tech-title">Workflow Automation & Orchestration</h3>
+                    <p>
+                        Built end-to-end automation using Make.com for event-based routing and Python for core 
+                        processing logic, with AWS S3 for document storage and versioning.
+                    </p>
+                    <div class="tech-details">
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Orchestration Platform:</span>
+                            <span class="tech-value">Make.com for workflow automation and event-based routing</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Processing Logic:</span>
+                            <span class="tech-value">Python for parsing, preprocessing, chunking, transformation, pipeline orchestration</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Storage & Versioning:</span>
+                            <span class="tech-value">AWS S3 for document storage, historical archive, version control</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Automation Flow:</span>
+                            <span class="tech-value">Upload → process → extract → generate XML → store → human review</span>
+                        </div>
+                        <div class="tech-detail-item">
+                            <span class="tech-label">Supporting Components:</span>
+                            <span class="tech-value">JavaScript for UI hooks, API glue, automation integration</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">04</span>
+                TECHNOLOGY STACK
+            </h2>
+            <div class="section-content">
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-category">
+                        <h3>AI & Machine Learning</h3>
+                        <ul>
+                            <li>Custom LLM pipeline (benefits-trained)</li>
+                            <li>Labelbox annotation platform</li>
+                            <li>Supervised learning dataset creation</li>
+                            <li>Prompt & schema enforcement layer</li>
+                            <li>Change detection & classification</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Processing & Automation</h3>
+                        <ul>
+                            <li>Python (parsing, preprocessing, orchestration)</li>
+                            <li>Make.com (workflow automation)</li>
+                            <li>AWS S3 (storage & versioning)</li>
+                            <li>JavaScript (UI & API integration)</li>
+                            <li>Event-based routing system</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Document Processing</h3>
+                        <ul>
+                            <li>PDF parsing & extraction</li>
+                            <li>PowerPoint slide processing</li>
+                            <li>Email & DOC file handling</li>
+                            <li>Spreadsheet data extraction</li>
+                            <li>Multi-format normalization</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack-category">
+                        <h3>Data & Outputs</h3>
+                        <ul>
+                            <li>XML generation & formatting</li>
+                            <li>JSON intermediate objects</li>
+                            <li>Schema validation</li>
+                            <li>Rule consistency enforcement</li>
+                            <li>Human review workflows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results & Impact -->
+        <section class="project-section">
+            <h2 class="section-title">
+                <span class="section-number">05</span>
+                RESULTS & BUSINESS IMPACT
+            </h2>
+            <div class="section-content">
+                <div class="results-grid">
+                    <div class="result-card">
+                        <div class="result-icon">⚡</div>
+                        <h3>Dramatically Faster Processing</h3>
+                        <p>Annual benefits updates processed rapidly with AI handling first-pass extraction and interpretation instead of manual review</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📚</div>
+                        <h3>Thousands of Documents</h3>
+                        <p>Production-ready system capable of processing massive volumes of historical and current benefits documentation</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🔄</div>
+                        <h3>Reduced Human Dependency</h3>
+                        <p>Eliminated repetitive "diff-and-rewrite" work, freeing ops teams for higher-value edge case handling</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">📈</div>
+                        <h3>Scalable Pipeline</h3>
+                        <p>Reusable architecture for future Open Enrollment cycles that adapts as document formats evolve</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🎯</div>
+                        <h3>Consistent XML Output</h3>
+                        <p>Standardized, validated XML generation ensuring downstream systems receive clean, usable data</p>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-icon">🧠</div>
+                        <h3>Continuous Improvement</h3>
+                        <p>AI training foundation improves over time as more plan updates are processed and validated</p>
+                    </div>
+                </div>
+
+                <div class="outcome-summary">
+                    <h3>Key Outcomes</h3>
+                    <p>
+                        The Benefits Document Intelligence System transformed annual benefits processing from a manual, 
+                        time-intensive bottleneck into an intelligent, scalable AI pipeline. By combining supervised learning, 
+                        custom LLM training, and automated XML generation, the solution processes thousands of unstructured 
+                        documents across wildly different formats—delivering structured, machine-readable outputs that feed 
+                        directly into benefits administration platforms.
+                    </p>
+                    <p>
+                        The supervised learning approach using Labelbox created a training dataset that teaches the AI not 
+                        just text extraction, but genuine understanding of how humans interpret benefits changes. This domain 
+                        knowledge, combined with robust preprocessing and validation layers, ensures consistent performance 
+                        across different cities, employers, and document structures. The human-in-the-loop review workflow 
+                        handles edge cases while the AI handles the repetitive bulk work, creating an optimal division of 
+                        labor that scales with business growth.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Footer -->
+        <nav class="project-footer-nav">
+            <a href="project-5.html" class="nav-button">
+                <span class="arrow-left">←</span>
+                <span>PREVIOUS PROJECT</span>
+            </a>
+            <a href="index.html" class="nav-button">
+                <span>BACK TO PORTFOLIO</span>
+            </a>
+        </nav>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <span class="footer-label">CONNECT</span>
+                    <span class="footer-divider">//</span>
+                    <a href="https://github.com/yourprofile" class="footer-link">GITHUB</a>
+                    <span class="footer-divider">//</span>
+                    <a href="#" class="footer-link" onclick="window.location.href='mailto:' + ['roman.rushey','gmail.com'].join('@'); return false;">EMAIL</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://linkedin.com/in/romanrushey" class="footer-link">LINKEDIN</a>
+                    <span class="footer-divider">//</span>
+                    <a href="https://t.me/romanrushey" class="footer-link">TELEGRAM</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2026 ROMAN PIKLIAEV • ALL SYSTEMS OPERATIONAL
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
